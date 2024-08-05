@@ -1,0 +1,48 @@
+format = """
+[](#6C63FF)\
+$os\
+$username\
+[](bg:#4F46E5 fg:#6C63FF)\
+$directory\
+[](fg:#4F46E5 bg:#6D28D9)\
+$git_branch\
+$git_status\
+[](fg:#6D28D9 bg:#1E40AF)\
+$python\
+[ ](fg:#1E40AF)\
+"""
+
+[os]
+style = "bg:#6C63FF"
+disabled = false
+
+[os.symbols]
+Mint = "󰧑 "
+
+[username]
+show_always = true
+style_user = "bg:#6C63FF"
+style_root = "bg:#6C63FF"
+format = '[$user ]($style)'
+disabled = false
+
+[directory]
+style = "bg:#4F46E5"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#6D28D9"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#6D28D9"
+format = '[$all_status$ahead_behind ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#1E40AF"
+format = '[ $symbol($virtualenv) ]($style)'
+disabled = false
